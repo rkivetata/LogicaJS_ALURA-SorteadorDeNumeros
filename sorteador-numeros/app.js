@@ -8,10 +8,23 @@ function sortear() {
     let ate = parseInt(document.getElementById('ate').value); //VAR ATE VAI RECEBER O VALOR INSERIDO NO INPUT
         console.log(ate);
 
-    var numeroAleatorio = obterNumeroAleatorio(de, ate); //A VAR VAI RECEBER O RETORNO DA FUNCAO DE OBTER NUMERO ALEATORIO, QUE CAPTURA OS VALORES DE 'DE' E 'ATE'
-    console.log(numeroAleatorio);
-}
+//ARRAY PARA GUARDAR A QUANTIDADE DE NUMEROS PEDIDOS PELO USUARIO - UTILIZANDO LOOP FOR
 
+    let numerosSorteados = [];
+    let numero;
+
+    for (let i = 0; i < quantidade; i++) {
+    //CRIA A VARIAVEL PADRAO i QUE COMECA COM O VALOR 0|| ENQUANTO ELA FOR MENOR DO QUE A QUANTIDADE DIGITADA PELO USUARIO ELA INCREMENTA UM
+    
+    //ATRIBUIR EM VARIAVEL O VALOR DO NUMERO ALEATORIO
+        numero = obterNumeroAleatorio(de, ate);
+
+    //COLOCA O VALOR DA VARIAVEL NUMERO NA ARRAY
+        numerosSorteados.push(numero);
+
+        alert(numerosSorteados);
+    }
+} 
 function obterNumeroAleatorio(min, max){ 
 //CRIANDO FUNCAO QUE OBTEM UM NUMERO ALEATORIO COM OS PARAMETROS DE VALOR MINIMO (MIN) E VALOR MAXIMO (MAX)
 
